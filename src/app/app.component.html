@@ -1,0 +1,11 @@
+<app-greeting></app-greeting>
+<app-user-profile></app-user-profile>
+<div *ngFor="let task of tasks">
+  <app-task [task]="task" (completed)="onTaskCompleted(task.id)"></app-task>
+</div>
+<app-registration-form></app-registration-form>
+<app-todo-list></app-todo-list>
+<app-book-list></app-book-list>
+<app-comment></app-comment>
+
+<router-outlet/>

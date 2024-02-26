@@ -1,0 +1,12 @@
+<div>
+  <input #todoTitle type="text" placeholder="Add new todo" />
+  <button (click)="addTodo(todoTitle.value); todoTitle.value = '';">Add</button>
+</div>
+
+<ul>
+  <li *ngFor="let todo of todos">
+    <input type="checkbox" [checked]="todo.completed" (change)="updateTodo(todo)">
+    {{ todo.title }}
+    <button (click)="deleteTodo(todo.id)">Delete</button>
+  </li>
+</ul>

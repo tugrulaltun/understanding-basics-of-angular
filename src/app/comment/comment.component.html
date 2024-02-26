@@ -1,0 +1,6 @@
+<div *ngFor="let comment of comments">
+  <p>{{ comment.author }}: {{ comment.content }}</p>
+</div>
+
+<input #commentInput type="text" placeholder="Write a comment...">
+<button (click)="onAddComment(commentInput.value); commentInput.value=''">Post Comment</button>

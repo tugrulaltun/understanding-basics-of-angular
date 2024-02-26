@@ -1,0 +1,6 @@
+<div *ngIf="task">
+  <div [class.completed]="task?.completed">
+    {{ task?.title }}
+    <button *ngIf="!task?.completed" (click)="markCompleted()">Mark as Completed</button>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+<ul>
+  <li *ngFor="let book of books">
+    <h3><a [routerLink]="['/book', book.id]">{{ book.title }}</a> by {{ book.author.name }}</h3>
+    <p>Published: {{ book.publicationDate | date }}</p>
+    <p *ngIf="book.genre">Genre: {{ book.genre }}</p>
+    <p *ngIf="book.description">Description: {{ book.description }}</p>
+  </li>
+</ul>
